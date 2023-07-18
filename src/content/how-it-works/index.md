@@ -1,6 +1,6 @@
 ---
 title: How It Works
-page_title: Let's take you through the simple onboarding procedure with Apna Health and the world of ayurveda
+page_title: Dream Big & Take Action, Turn Your Vision Into Reality
 
 # perfomance
 perfomance:
@@ -34,4 +34,4 @@ our_works:
       - Any specific creatives requirement will be provided alongwith your scheduled weekly creative.
       - Creatives for all the occassions and national holidays will be provided a day before.
 ---
-Dream Big & Take Action <br /> Turn Your Vision Into Reality
+Let's take you through the simple onboarding procedure with Apna Health <br /> and transform your practice the way you want it to be.
