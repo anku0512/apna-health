@@ -28,7 +28,7 @@ our_works:
       - If you have an existing profile, we will ask you to add us as the manager in it so that we can work on it.
       - We will update the clinic name on google business, so that you can benefit from the name being used across India.
   - title:  Creatives Schedule
-    image: "/images/how-it-work/creatives-schedule.png"
+    image: "/images/how-it-work/creatives.png"
     list:
       - You will be given one creative per week according to the list of treatments that you have given us.
       - Any specific creatives requirement will be provided alongwith your scheduled weekly creative.
