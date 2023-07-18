@@ -1,13 +1,13 @@
 {
   "site": {
-    "title": "Pinwheel Astro",
+    "title": "Apna Health",
     "base_url": "https://pinwheel-astro.vercel.app",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
-    "logo_width": "147",
-    "logo_height": "31",
+    "logo": "/images/apna-health-logo.png",
+    "logo_width": "294",
+    "logo_height": "62",
     "logo_text": "Pinwheel"
   },
 
@@ -18,11 +18,11 @@
   },
 
   "call_to_action": {
-    "title": "Helping teams in the world with focus",
-    "description": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
+    "title": "Helping Ayurvedic Doctors live their Entreprenurial dream",
+    "description": "Our network is only available to BAMS qualified doctors and not to any other healthcare practitioner. We are dedicated to enabling vaidyas who have chosen the Ayurvedic medical system to creat their own success sotry.",
     "button": {
-      "label": "Download The Theme",
-      "link": "https://themefisher.com/astro-themes/pinwheel-astro"
+      "label": "Contact us",
+      "link": "https://docs.google.com/forms/d/e/1FAIpQLSfvtAo2_TPiUOEW1JpeaMFbU-M1Qzfeo8WuS5P1bCAbQAHWHA/viewform"
     }
   },
 
@@ -33,12 +33,11 @@
   },
 
   "params": {
-    "footer_description": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
-    "email": "info@andromeda.io",
-    "location": "2118 Thornridge Cir. Syracuse, Connecticut 35624",
-    "phone": "+704-555-0127",
-    "contact_form_action": "#",
-    "copyright": "Copyright © 2023 a theme by [Themefisher](https://themefisher.com)"
+    "footer_description": "We invite you to explore the services we offer and see how Apna Health can help you increase your profits and spread the word about your clinic.",
+    "email": "ankush@apnahealth.in",
+    "location": "Bengaluru, India",
+    "phone": "+91- 76191 14536",
+    "contact_form_action": "#"
   },
 
   "metadata": {
