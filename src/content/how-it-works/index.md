@@ -9,7 +9,7 @@ perfomance:
     image: "/images/how-it-work/initial-meeting.png"
   - title: Next step
     description: Upon signing of the agreement, we will start with the services.
-    image: "/images/how-it-work/market-next-setp.png"
+    image: "/images/how-it-work/image.png"
   - title: Ready to go
     description: You tell us your specializations and whatever is the requirement and we shall start working on it as quickly as possible.
     image: "/images/how-it-work/ready-to-go.png"
@@ -28,7 +28,7 @@ our_works:
       - If you have an existing profile, we will ask you to add us as the manager in it so that we can work on it.
       - We will update the clinic name on google business, so that you can benefit from the name being used across India.
   - title:  Creatives Schedule
-    image: "/images/how-it-work/creatives.png"
+    image: "/images/how-it-work/social-media.png"
     list:
       - You will be given one creative per week according to the list of treatments that you have given us.
       - Any specific creatives requirement will be provided alongwith your scheduled weekly creative.
