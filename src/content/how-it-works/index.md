@@ -2,7 +2,6 @@
 title: How It Works
 page_title: Let's take you through the simple onboarding procedure with Apna Health and the world of ayurveda
 
-
 # perfomance
 perfomance:
   - title: Initial meeting
@@ -19,13 +18,13 @@ our_works:
   - title: We'll do the legwork so you don't have to.
     image: "/images/how-it-work/image-1.png"
     list:
-       - We will look for the competitive keywords and keep your profile updated with them.
+      - We will look for the competitive keywords and keep your profile updated with them.
       - We will make sure the weekly post is publishded on the scheduled time on every fixed day.
       - We will make sure all the questions are answered on google profile.
   - title: Google Business set-up
     image: "/images/how-it-work/image-2.png"
     list:
-     - If you don't have a profile, we will create one for you.
+      - If you don't have a profile, we will create one for you.
       - If you have an existing profile, we will ask you to add us as the manager in it so that we can work on it.
       - We will update the clinic name on google business, so that you can benefit from the name being used across India.
   - title:  Creatives Schedule
