@@ -5,14 +5,14 @@ page_title: Let's take you through the simple onboarding procedure with Apna Hea
 # perfomance
 perfomance:
   - title: Initial meeting
-    description: Give us a call and we will talk you through the whole procedure of onboarding with us.
-    image: "/images/how-it-work/results.png"
+    description: Give us a call and we will walk you through the whole procedure of onboarding with us.
+    image: "/images/how-it-work/initial-meeting.png"
   - title: Next step
     description: Upon signing of the agreement, we will start with the services.
-    image: "/images/how-it-work/market-professionals.png"
+    image: "/images/how-it-work/market-next-setp.png"
   - title: Ready to go
     description: You tell us your specializations and whatever is the requirement and we shall start working on it as quickly as possible.
-    image: "/images/how-it-work/awards.png"
+    image: "/images/how-it-work/ready-to-go.png"
 # works
 our_works:
   - title: We'll do the legwork so you don't have to.
