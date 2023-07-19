@@ -9,6 +9,10 @@
       "url": "/about"
     },
     {
+      "name":"Integrations",
+      "url":"/integrations"
+    },
+    {
       "name": "Blog",
       "url": "/blog"
     },
