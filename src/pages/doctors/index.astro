@@ -1,0 +1,53 @@
+---
+import Doctors from "@components/Doctors.astro";
+import PageHeader from "@components/PageHeader.astro";
+import Shape from "@components/Shape.astro";
+import DoctorsCategories from "@components/doctors/DoctorsCategories.astro";
+import FeaturedDoctors from "@components/doctors/FeaturedDoctors.astro";
+import config from "@config/config.json";
+import Base from "@layouts/Base.astro";
+import Pagination from "@layouts/components/Pagination.astro";
+import Cta from "@layouts/partials/Cta.astro";
+import { getSinglePage } from "@lib/contentParser.astro";
+import { getTaxonomy } from "@lib/taxonomyParser.astro";
+import { sortByDate } from "@lib/utils/sortFunctions";
+import { getEntryBySlug } from "astro:content";
+
+const { doctors_folder } = config.settings;
+const doctorsIndex = await getEntryBySlug<any, string>(doctors_folder, "-index");
+const posts = await getSinglePage(doctors_folder);
+const categories = await getTaxonomy(config.settings.doctors_folder, "categories");
+const sortedPosts = sortByDate(posts);
+const featuredPost = sortedPosts.filter((item) => item.data.featured);
+const recentPost = sortedPosts.filter((item) => !item.data.featured);
+const totalPages = Math.ceil(recentPost.length / config.settings.pagination);
+const currentPosts = recentPost.slice(0, config.settings.pagination);
+---
+
+<Base
+  title={doctorsIndex.data.title}
+  meta_title={doctorsIndex.data.meta_title}
+  description={doctorsIndex.data.description}
+  image={doctorsIndex.data.image}
+>
+  <Shape />
+  <section class="page-hero pt-16">
+    <div class="container">
+      <PageHeader page_data={doctorsIndex.data} />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <FeaturedDoctors posts={featuredPost} />
+      <DoctorsCategories categories={categories} />
+      <h2 class="h4 mb-4">Recent Posts</h2>
+      <Doctors posts={currentPosts} />
+      <Pagination
+        section={doctors_folder}
+        currentPage={1}
+        totalPages={totalPages}
+      />
+    </div>
+  </section>
+  <Cta />
+</Base>

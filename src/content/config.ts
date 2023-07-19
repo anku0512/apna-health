@@ -15,6 +15,21 @@ const blogCollection = defineCollection({
   }),
 });
 
+// Doctors collection schema
+const doctorsCollection = defineCollection({
+  schema: z.object({
+    id: z.string().optional(),
+    title: z.string(),
+    subtitle: z.string().optional(),
+    date: z.date().optional(),
+    image: z.string().optional(),
+    author: z.string().optional(),
+    categories: z.array(z.string()).default(["others"]),
+    draft: z.boolean().optional(),
+    featured: z.boolean().optional(),
+  }),
+});
+
 // Pages collection schema
 const pagesCollection = defineCollection({
   schema: z.object({
@@ -32,4 +47,5 @@ const pagesCollection = defineCollection({
 export const collections = {
   blog: blogCollection,
   pages: pagesCollection,
+  doctors: doctorsCollection,
 };
