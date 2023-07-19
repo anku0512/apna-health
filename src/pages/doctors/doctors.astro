@@ -1,6 +1,8 @@
 ---
 import Base from "@layouts/Base.astro";
-const doctors = await Astro.glob('../content/doctors/*.md');
+import PageHeader from "@components/PageHeader.astro";
+import config from "@config/config.json";
+const doctors = await Astro.props('../content/doctors/*.mdx');
 ---
 
 <Base>
