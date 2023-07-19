@@ -5,12 +5,8 @@
       "url": "/"
     },
     {
-      "name": "About",
-      "url": "/about"
-    },
-    {
-      "name":"Integrations",
-      "url":"/integrations"
+      "name": "Doctors",
+      "url": "/doctors"
     },
     {
       "name": "Blog",
@@ -70,8 +66,8 @@
 
   "footer": [
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Doctors",
+      "url": "/doctors"
     },
     {
       "name": "Contact",

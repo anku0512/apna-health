@@ -1,26 +1,26 @@
 ---
 import PageHeader from "@components/PageHeader.astro";
 import Shape from "@components/Shape.astro";
-import CounterComponent from "@components/about/CounterComponent.astro";
-import Gallery from "@components/about/Gallery.astro";
-import OurMembers from "@components/about/OurMembers.astro";
-import Works from "@components/about/Works.astro";
+import CounterComponent from "@components/doctors/CounterComponent.astro";
+import Gallery from "@components/doctors/Gallery.astro";
+import OurMembers from "@components/doctors/OurMembers.astro";
+import Works from "@components/doctors/Works.astro";
 import Base from "@layouts/Base.astro";
 import { getEntryBySlug } from "astro:content";
 
-const about = await getEntryBySlug("about", "index");
-const { counter, gallery, features, members } = about.data;
+const doctors = await getEntryBySlug("doctors", "index");
+const { counter, gallery, features, members } = doctors.data;
 const page_data = {
-  ...about.data,
-  content: about.body,
+  ...doctors.data,
+  content: doctors.body,
 };
 ---
 
 <Base
-  title={about.data.title}
-  meta_title={about.data.meta_title}
-  description={about.data.description}
-  image={about.data.image}
+  title={doctors.data.title}
+  meta_title={doctors.data.meta_title}
+  description={doctors.data.description}
+  image={doctors.data.image}
 >
   <Shape />
   <section class="page-hero py-16">

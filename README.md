@@ -48,7 +48,7 @@
 - 📝 Blog Single
 - 🗂️ Categories
 - 🗂️ Category Single
-- 👤 About
+- 👤 Doctors
 - 📞 Contact
 - 💼 Career
 - 💼 Career Single

@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Doctors"
 page_title: "About our company"
 buttons:
   - label: Download The Theme
