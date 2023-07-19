@@ -42,7 +42,7 @@
 ## 📄 17+ Pre-Designed Pages
 
 - 🏠 Home
-- 🛠️ How it works
+- 🛠️ Become A Franchise
 - 🌟 Features
 - 📝 Blog
 - 📝 Blog Single

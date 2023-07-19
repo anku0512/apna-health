@@ -1,5 +1,5 @@
 ---
-title: How It Works
+title: Become A Franchise
 page_title: Dream Big & Take Action, Turn Your Vision Into Reality
 
 # perfomance
