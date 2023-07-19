@@ -1,0 +1,13 @@
+---
+// src/pages/doctors/[slug].astro
+
+import DoctorProfile from '@components/DoctorProfile.astro'
+
+const doctor = {
+  name: 'Dr. John Doe',
+  address: '123 Main St, City, State',
+  qualifications: ['MBBS', 'MD']
+}
+---
+
+<DoctorProfile {...doctor} />

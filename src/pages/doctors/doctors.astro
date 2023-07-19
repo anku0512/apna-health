@@ -1,0 +1,16 @@
+---
+import Base from "@layouts/Base.astro";
+const doctors = await Astro.glob('../content/doctors/*.md');
+---
+
+<Base>
+  <div class="container">
+    {doctors.map(doctor => (
+      <article>
+        <h2>{doctor.frontmatter.title}</h2>
+        <p>{doctor.frontmatter.excerpt}</p>
+        <a href={`/doctors/${doctor.slug}`}>Read more</a>
+      </article>
+    ))}
+  </div>
+</Base>

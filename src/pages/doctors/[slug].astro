@@ -1,0 +1,40 @@
+---
+import Base from "@layouts/Base.astro";
+const { frontmatter } = Astro.props;
+---
+
+<Base>
+  <h1>{frontmatter.title}</h1>
+  {/* full profile content */}
+</Base>
+---
+// src/components/DoctorProfile.astro
+
+const { name, address, qualifications } = Astro.props;
+---
+
+<article class="doctor-profile">
+  <header>
+    <h2>{name}</h2>
+  </header>
+
+  <div class="doctor-info">
+    <p><strong>Address:</strong> {address}</p>
+
+    <p><strong>Qualifications:</strong></p>
+    <ul>
+      {qualifications.map(q => <li>{q}</li>)}
+    </ul>
+  </div>
+</article>
+
+<style>
+.doctor-profile {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1); 
+}
+
+/* Additional styles similar to blog */
+</style>
