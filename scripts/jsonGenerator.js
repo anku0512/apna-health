@@ -29,6 +29,8 @@ const getData = (folder) => {
 // get post data
 const posts = getData(`src/content/posts`);
 
+
+
 try {
   // creare folder if it doesn't exist
   if (!fs.existsSync(jsonDir)) {

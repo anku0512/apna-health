@@ -1,8 +1,6 @@
 ---
 import { Image } from "@astrojs/image/components";
 import dateFormat from "@lib/utils/dateFormat";
-import readingTime from "@lib/utils/readingTime";
-import Disqus from "./function-components/Disqus";
 
 import { humanize, slugify } from "@lib/utils/textConverter";
 import {
@@ -24,8 +22,8 @@ const { Content } = await post.render();
           class="w-full rounded-xl"
           src={post.data.image}
           alt=""
-          width={920}
-          height={450}
+          width={450}
+          height={350}
         />
       </div>
       <div class="mt-10 max-w-[810px] lg:col-9">
@@ -43,10 +41,7 @@ const { Content } = await post.render();
               <FaRegCalendarAlt className={"mr-2 -mt-1 inline-block"} />
               {dateFormat(post.data.date)}
             </li>
-            <li class="mr-4 inline-block">
-              <FaRegClock className={"mr-2 -mt-1 inline-block"} />
-              {readingTime(post.body)}
-            </li>
+            
             <li class="mr-4 inline-block">
               <FaRegFolder className={"mr-2 -mt-1 inline-block"} />
               {
@@ -67,7 +62,6 @@ const { Content } = await post.render();
         <div class="content">
           <Content />
         </div>
-        <Disqus client:load />
       </div>
     </div>
   </div>
