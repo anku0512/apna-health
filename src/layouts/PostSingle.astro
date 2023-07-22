@@ -11,7 +11,7 @@ const allAuthors = await getSinglePage("authors");
 const posts = await getSinglePage(blog_folder);
 const { post } = Astro.props;
 const { Content } = await post.render();
-const { title, description, authors, categories, image, date, tags } =
+const { title, description, authors, categories, image, date, tags, address, clinic, url, video } =
   post.data;
 ---
 
@@ -101,9 +101,13 @@ const { title, description, authors, categories, image, date, tags } =
           className="social-share mb-4"
           title={title}
           description={description}
+          address={address}
+          clinic={clinic}
+          
           slug={post.slug}
         />
-      </div>
+    
+      
     </article>
   </div>
 </section>
