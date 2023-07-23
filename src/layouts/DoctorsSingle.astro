@@ -20,78 +20,101 @@ const cards = [
     link: "/path/to/link-1"
   }
 ]
+
+import Blogs from "@components/Blogs.astro";
+import PageHeader from "@components/PageHeader.astro";
+import Shape from "@components/Shape.astro";
+import BlogCategories from "@components/blog/BlogCategories.astro";
+import config from "@config/config.json";
+import Base from "@layouts/Base.astro";
+import { getSinglePage } from "@lib/contentParser.astro";
+import { getTaxonomy } from "@lib/taxonomyParser.astro";
+
+const { blog_folder } = config.settings;
+const posts = await getSinglePage(blog_folder);
+const categories = await getTaxonomy(blog_folder, "categories");
+
+
 ---
 
-<section class="section doctors-single">
+
+<section class="page-hero pb-14 pt-16">
   <div class="container">
-    <div class="row">
-      <div class="lg:col-6">
-        <Image
-          class="w-full rounded-xl"
-          src={post.data.image}
-          alt=""
-          width={450}
-          height={350} 
-        />
-      </div>
+    <PageHeader page_data={{ title: post.data.title  }} />
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cards">
+      <div class="row">
       
-      <div class="lg:col-6">
-        <h1 class="h2">
+        {cards.map(card => (
+          <div class="card flex flex-row shadow-md">
+            <div class="card-image basis-1/4">
+              <img src={post.data.image} alt="" width="350" height="350">
+            </div>
+
+            <div class="card-content basis-3/4 pl-4">
+              <h1 class="h2">
           {post.data.title}
         </h1>
+              <p>{post.data.subtitle}</p>
+            </div>
+          </div>
+        ))}
         
-        <div class="mb-5 mt-6 flex items-center space-x-2">
-          <ul class="mb-4">
-            {post.data.subtitle}
-          </h1>
-        </div>
- 
       </div>
     </div>
   </div>
 </section>
 
-<section class="section doctors-single">
+<section class="mt-16"> 
+  <!-- next section -->
+
+<section>
   <div class="container">
-    <div class="row">
-      <div class="lg:col-6">
-        <Image
-          class="w-full rounded-xl"
-          src={post.data.image}
-          alt=""
-          width={250}
-          height={250} 
-        />
-      </div>
+    <div class="cards">
+      <div class="row">
       
-      <div class="lg:col-6">
-        <h1 class="h2">
+        {cards.map(card => (
+          <div class="card flex flex-row shadow-md">
+            <a href={post.data.Url} target={post.data.url}>
+              <img src={post.data.image2} alt="" width="250" height="250">
+            </a>
+
+            <div class="card-content basis-3/4 pl-4">
+              <h1 class="h2 mb-2">
           {post.data.clinic}
         </h1>
+              <p class="mt-2">{post.data.address}</p>
+              
+              <!-- Add Google Profile Ratings -->
+              <div>
+                <img src={post.data.ratingImage} alt="Google Rating"> 
+                <span>{post.data.ratingNumber}</span>
+              </div>
+              
+              <a href={post.data.url}target="_blank" class="block text-primary">
+            {post.data.url}</a>
+            </div>
+          </div>
+        ))}
         
-        <div class="mb-5 mt-6 flex items-center space-x-2">
-          <ul class="mb-4">
-            {post.data.address}
-          </h1>
-        </div>
-        <div class="mb-5 mt-6 flex items-center space-x-2">
-          <a href={post.data.url} target="_blank" class="block text-primary">
-            {post.data.url}
-          </a>
-        </div>
       </div>
     </div>
   </div>
-  <div class="video-container">
-    <iframe 
-      width="560" 
-      height="315"
-      src="post.data.video"
-      title="Review" 
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen
-    ></iframe>
-  </div>
 </section>
 
+<section class="mt-16"> 
+  <!-- next section -->
+
+  
+ 
+  
+  <section class="section">
+    <div class="container">
+      <Blogs posts={posts} />
+    </div>
+  </section>
+</Base>

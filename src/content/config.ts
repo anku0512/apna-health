@@ -25,6 +25,7 @@ const doctorsCollection = defineCollection({
     clinic: z.string().optional(),
     date: z.date().optional(),
     image: z.string().optional(),
+    image2: z.string().optional(),
     video: z.string().optional(),
     url: z.string().optional(),
     author: z.string().optional(),
