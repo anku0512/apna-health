@@ -33,6 +33,7 @@ import { getTaxonomy } from "@lib/taxonomyParser.astro";
 const { blog_folder } = config.settings;
 const posts = await getSinglePage(blog_folder);
 const categories = await getTaxonomy(blog_folder, "categories");
+const filterByTags = post.data.title;
 
 
 ---
