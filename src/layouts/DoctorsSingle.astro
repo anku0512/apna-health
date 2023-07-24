@@ -34,8 +34,6 @@ const { blog_folder } = config.settings;
 const posts = await getSinglePage(blog_folder);
 const categories = await getTaxonomy(blog_folder, "categories");
 const filterByTags = post.data.title;
-
-
 ---
 
 
@@ -118,4 +116,10 @@ const filterByTags = post.data.title;
       <Blogs posts={posts} />
     </div>
   </section>
+
+  
+ 
+
 </Base>
+
+

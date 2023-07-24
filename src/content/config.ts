@@ -29,7 +29,7 @@ const doctorsCollection = defineCollection({
     video: z.string().optional(),
     url: z.string().optional(),
     author: z.string().optional(),
-    categoriesq: z.array(z.string()).default(["others"]),
+    categories: z.array(z.string()).default(["others"]),
     draft: z.boolean().optional(),
     featured: z.boolean().optional(),
   }),
