@@ -25,7 +25,16 @@ import { getTaxonomy } from "@lib/taxonomyParser.astro";
 const { blog_folder } = config.settings;
 const posts = await getSinglePage(blog_folder);
 const categories = await getTaxonomy(blog_folder, "categories");
-const filterByTags = post.data.title;
+// Get all posts 
+
+// Filter posts by category
+// Get title of current post
+const { title } = Astro.props.post.data;
+
+// Filter posts
+const filteredPosts = posts.filter(post => {
+  return post.data.categories.includes(title)
+});
 import "../styles/components.scss";
 
 ---
@@ -109,7 +118,7 @@ import "../styles/components.scss";
     <!-- Move this section down -->
     <section class="section">
       <div class="container">
-        <Blogs posts={posts} />
+        <Blogs posts={filteredPosts} />
       </div>
     </section>
 
