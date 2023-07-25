@@ -12,14 +12,6 @@ import {
 } from "react-icons/fa/index.js";
 const { post } = Astro.props;
 const { Content } = await post.render();
-const cards = [
-  {
-    image: "/path/to/image-1.png",
-    heading: "Card Heading 1", 
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.",
-    link: "/path/to/link-1"
-  }
-]
 
 import Blogs from "@components/Blogs.astro";
 import PageHeader from "@components/PageHeader.astro";
@@ -34,8 +26,9 @@ const { blog_folder } = config.settings;
 const posts = await getSinglePage(blog_folder);
 const categories = await getTaxonomy(blog_folder, "categories");
 const filterByTags = post.data.title;
----
+import "../styles/components.scss";
 
+---
 
 <section class="page-hero pb-14 pt-16">
   <div class="container">
@@ -43,83 +36,83 @@ const filterByTags = post.data.title;
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="cards">
-      <div class="row">
-      
-        {cards.map(card => (
-          <div class="card flex flex-row shadow-md">
-            <div class="card-image basis-1/4">
-              <img src={post.data.image} alt="" width="350" height="350">
-            </div>
-
-            <div class="card-content basis-3/4 pl-4">
-              <h1 class="h2">
-          {post.data.title}
-        </h1>
-              <p>{post.data.subtitle}</p>
-            </div>
-          </div>
-        ))}
-        
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="mt-16"> 
+<section class="mt-6"> 
   <!-- next section -->
+  
 
-<section>
-  <div class="container">
-    <div class="cards">
-      <div class="row">
-      
-        {cards.map(card => (
-          <div class="card flex flex-row shadow-md">
-            <a href={post.data.Url} target={post.data.url}>
-              <img src={post.data.image2} alt="" width="250" height="250">
-            </a>
+  <head>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  </head>
 
-            <div class="card-content basis-3/4 pl-4">
-              <h1 class="h2 mb-2">
-          {post.data.clinic}
-        </h1>
-              <p class="mt-2">{post.data.address}</p>
-              
-              <!-- Add Google Profile Ratings -->
-              <div>
-                <img src={post.data.ratingImage} alt="Google Rating"> 
-                <span>{post.data.ratingNumber}</span>
+
+  <section>
+    <div class="wrapper">
+        <div class="left">
+          <div class="card-image basis-1/4">
+            <img src={post.data.image} alt="" >
+          </div>
+            <h4>{post.data.title}</h4>
+             <p>{post.data.subtitle}</p>
+        </div>
+        <div class="right">
+            <div class="info">
+                <h3>Clinic</h3>
+                <div class="flex">
+                <div class="card-image basis-1/4">
+            <img src={post.data.image2} alt="" width="150" height="150">
+          </div>
+                <div class="clinic basis-3/4 pl-4">
+                     <div class="data">
+                        <h4>{post.data.clinic}</h4>
+                        <p>{post.data.address}</p>
+                     </div>
+                </div>
               </div>
-              
-              <a href={post.data.url}target="_blank" class="block text-primary">
-            {post.data.url}</a>
             </div>
-          </div>
-        ))}
-        
-      </div>
+          
+            <div class="specializations">
+    <h3>Specializations</h3>
+    <div class="specializations_data flex">
+      {post.data.specializations.map(spec => (
+        <div class="spec-box mr-2 mb-2 rounded bg-white p-2 shadow">
+          {spec}  
+        </div>
+      ))}
     </div>
   </div>
-</section>
-
-<section class="mt-16"> 
-  <!-- next section -->
-
-  
- 
-  
-  <section class="section">
-    <div class="container">
-      <Blogs posts={posts} />
+          
+            <div class="social_media">
+                <ul>
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="{post.data.url}"><i class="fab fa-google"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                
+              </ul>
+          </div>
+        </div>
     </div>
-  </section>
-
-  
- 
-
-</Base>
+    </section>
 
 
+    
+
+
+   
+    <section class="mt-16"> 
+      <!-- next section -->
+
+
+
+    
+    
+    <!-- Move this section down -->
+    <section class="section">
+      <div class="container">
+        <Blogs posts={posts} />
+      </div>
+    </section>
+
+
+
+  </Base>

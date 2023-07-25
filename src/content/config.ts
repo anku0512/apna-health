@@ -30,6 +30,8 @@ const doctorsCollection = defineCollection({
     url: z.string().optional(),
     author: z.string().optional(),
     categories: z.array(z.string()).default(["others"]),
+    specializations: z.array(z.string()).default(["others"]),
+    
     draft: z.boolean().optional(),
     featured: z.boolean().optional(),
   }),
