@@ -37,6 +37,9 @@ const filteredPosts = posts.filter(post => {
 });
 import "../styles/components.scss";
 
+
+
+
 ---
 
 <section class="page-hero pb-14 pt-16">
@@ -92,10 +95,10 @@ import "../styles/components.scss";
           
             <div class="social_media">
                 <ul>
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="{post.data.url}"><i class="fab fa-google"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                  <li><a href={post.data.facebook}><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href={post.data.google}><i class="fab fa-google"></i></a></li>
+                  <li><a href={post.data.instagram}><i class="fab fa-instagram"></i></a></li>
+                  <li><a href={post.data.whatsapp}><i class="fab fa-whatsapp"></i></a></li>
                 
               </ul>
           </div>
@@ -118,10 +121,12 @@ import "../styles/components.scss";
     <!-- Move this section down -->
     <section class="section">
       <div class="container">
+        <h2 class="text-center">Blogs by {post.data.title}</h2>
         <Blogs posts={filteredPosts} />
       </div>
     </section>
 
-
+    
+  
 
   </Base>

@@ -520,7 +520,70 @@ select:invalid {
   list-style: none;
   font-family: 'Josefin Sans', sans-serif;
 }
+// Add media query for mobile screens
+@media (max-width: 768px) {
 
+  // Make wrapper display as flex column
+  .wrapper {
+    flex-direction: column;
+    align-items: center; 
+    
+  
+  box-shadow: 0 2px 20px 0 rgba(69,90,100,.08);
+  }
+
+  // // Make left and right wrapper center aligned
+  // .wrapper .left,
+  // .wrapper .right {
+  //   align-items:center;
+  // }
+
+  // Make left and right wrapper full width
+  .wrapper .left,
+  .wrapper .right {
+    width: 100%;
+     // Limit max width
+  }
+// Add max-width with margin auto for centering
+.wrapper .right {
+  max-width: 350px;
+  margin: 0 auto;
+}
+// Add margin bottom to left wrapper
+.wrapper .left {
+  margin-bottom: 20px; 
+}
+// Reduce font size 
+.wrapper .right {
+  font-size: 14px; 
+}
+
+// Reduce heading sizes
+.wrapper .right h3 {
+  font-size: 18px;
+}
+
+.wrapper .right h4 {
+  font-size: 16px;
+}
+
+
+// Allow spec boxes to wrap to new row
+.wrapper .right .specializations_data {
+  flex-wrap: wrap;
+}
+
+// Make spec boxes take up equal width
+.spec-box {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+
+
+
+ 
+
+}
 body{
    background-color: #f3f3f3;
 }
