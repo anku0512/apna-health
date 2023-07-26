@@ -28,23 +28,26 @@ const categories = await getTaxonomy(blog_folder, "categories");
 // Get all posts 
 
 // Filter posts by category
-// Get title of current post
-const { title } = Astro.props.post.data;
+// Get name of current post
+const { name } = Astro.props.post.data;
 
 // Filter posts
 const filteredPosts = posts.filter(post => {
-  return post.data.categories.includes(title)
+  return post.data.categories.includes(name)
 });
 import "../styles/components.scss";
 
-
+import Testimonial from "@layouts/components/Testimonial.astro";
+import { getEntryBySlug } from "astro:content";
+const doctors = await getEntryBySlug("doctors", "index");
+const { testimonial } = post.data;
 
 
 ---
 
 <section class="page-hero pb-14 pt-16">
   <div class="container">
-    <PageHeader page_data={{ title: post.data.title  }} />
+    <PageHeader page_data={{ title: post.data.name  }} />
   </div>
 </section>
 
@@ -63,7 +66,7 @@ import "../styles/components.scss";
           <div class="card-image basis-1/4">
             <img src={post.data.image} alt="" >
           </div>
-            <h4>{post.data.title}</h4>
+            <h4>{post.data.name}</h4>
              <p>{post.data.subtitle}</p>
         </div>
         <div class="right">
@@ -107,9 +110,6 @@ import "../styles/components.scss";
     </section>
 
 
-    
-
-
    
     <section class="mt-16"> 
       <!-- next section -->
@@ -121,12 +121,15 @@ import "../styles/components.scss";
     <!-- Move this section down -->
     <section class="section">
       <div class="container">
-        <h2 class="text-center">Blogs by {post.data.title}</h2>
+        <h2 class="text-center">Blogs by {post.data.name}</h2>
         <Blogs posts={filteredPosts} />
       </div>
     </section>
 
-    
+  <!-- testimonial -->
+  <Testimonial testimonial={testimonial} />
+   
   
+    
 
   </Base>

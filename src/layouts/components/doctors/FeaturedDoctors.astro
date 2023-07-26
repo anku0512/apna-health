@@ -19,7 +19,7 @@ const { posts } = Astro.props;
             width={235}
             height={304}
             src={post.data.image}
-            alt={post.data.title}
+            alt={post.data.name}
           />
           <div class="card-content">
             <div class="card-tags space-x-1">
@@ -29,8 +29,8 @@ const { posts } = Astro.props;
                 </a>
               ))}
             </div>
-            <h3 class="h4 card-title">
-              <a href={`/doctors/${post.slug}`}>{post.data.title}</a>
+            <h3 class="h4 card-name">
+              <a href={`/doctors/${post.slug}`}>{post.data.name}</a>
             </h3>
             <p class="mb-4 text-text">
               {plainify(post.body?.slice(0, Number(summary_length)))}...

@@ -37,13 +37,13 @@ const indexOfLastPost = currentPage * config.settings.pagination;
 const indexOfFirstPost = indexOfLastPost - config.settings.pagination;
 const currentPosts = recentPost.slice(indexOfFirstPost, indexOfLastPost);
 const page_data = {
-  index_title: doctorsIndex.data.title,
+  index_title: doctorsIndex.data.name,
   slug: `page / ${slug}`,
 };
 ---
 
 <Base
-  title={doctorsIndex.data.title}
+  title={doctorsIndex.data.name}
   meta_title={doctorsIndex.data.meta_title}
   description={doctorsIndex.data.description}
   image={doctorsIndex.data.image}

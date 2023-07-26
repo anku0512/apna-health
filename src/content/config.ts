@@ -19,7 +19,7 @@ const blogCollection = defineCollection({
 const doctorsCollection = defineCollection({
   schema: z.object({
     id: z.string().optional(),
-    title: z.string(),
+    name: z.string(),
     subtitle: z.string().optional(),
     address: z.string().optional(),
     clinic: z.string().optional(),
@@ -34,9 +34,21 @@ const doctorsCollection = defineCollection({
     author: z.string().optional(),
     categories: z.array(z.string()).default(["others"]),
     specializations: z.array(z.string()).default(["others"]),
-    
     draft: z.boolean().optional(),
     featured: z.boolean().optional(),
+    testimonial: z.object({
+      title: z.string(),
+      description: z.string(),
+      testimonial_list: z.array(
+        z.object({
+          author: z.string(),
+          avatar: z.string().optional(),
+          rating: z.string(), 
+          organization: z.string().optional(),
+          content: z.string().optional(),
+        })
+      ),
+    }),
   }),
 });
 
