@@ -10,4 +10,10 @@ testimonial:
       rating: "five"
       organization: "Company Inc"
       content: "Testimonial content" 
+picture:
+  heading: "Picture heading"
+  picture_list:
+    - photo: "/path/to/photo.png"
+      alternate: "Alternate text"
+      detail: "Photo detail"
 ---

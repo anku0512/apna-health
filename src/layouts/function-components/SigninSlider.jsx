@@ -4,6 +4,8 @@ import SwiperCore, { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { getEntryBySlug } from "astro:content";
+const doctors = await getEntryBySlug("doctors", "index");
 
 const SigninSlider = ({ title }) => {
   SwiperCore.use([Pagination]);
@@ -13,7 +15,7 @@ const SigninSlider = ({ title }) => {
     <div className="auth-banner bg-gradient flex hidden flex-col items-center justify-center py-16 lg:col-6 lg:block">
       <img
         className="absolute left-0 top-0 h-full w-full"
-        src="/images/login-banner-bg.png"
+        src="post.data.image"
         alt=""
       />
       <div className="w-full text-center">
@@ -41,7 +43,7 @@ const SigninSlider = ({ title }) => {
                 width="667"
                 height="557"
                 className="mx-auto"
-                src="/images/signup-carousel-img-1.png"
+                src="/images/users/user-1.png"
                 alt=""
               />
             </SwiperSlide>

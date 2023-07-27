@@ -49,6 +49,16 @@ const doctorsCollection = defineCollection({
         })
       ),
     }),
+  picture: z.object({
+    heading: z.string(),
+    picture_list: z.array(
+      z.object({
+        photo: z.string().optional(),
+        alternate: z.string().optional(),
+        detail: z.string().optional(),
+      }),
+    ),
+  })
   }),
 });
 

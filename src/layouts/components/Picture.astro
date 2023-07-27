@@ -1,0 +1,20 @@
+---
+import PictureSlider from "@layouts/function-components/PictureSlider";
+const { picture } = Astro.props;
+---
+
+<section class="reviews">
+  <div class="container">
+    <div class="row justify-between">
+      <div class="lg:col-6">
+        <h2>{picture.heading}</h2>
+      </div>
+    
+    </div>
+    <div class="row mt-10">
+      <div class="col-12">
+        <PictureSlider list={picture.picture_list} client:load />
+      </div>
+    </div>
+  </div>
+</section>

@@ -38,9 +38,11 @@ const filteredPosts = posts.filter(post => {
 import "../styles/components.scss";
 
 import Testimonial from "@layouts/components/Testimonial.astro";
+import Picture from "@layouts/components/Picture.astro";
 import { getEntryBySlug } from "astro:content";
 const doctors = await getEntryBySlug("doctors", "index");
-const { testimonial } = post.data;
+const { testimonial, picture } = post.data;
+
 
 
 ---
@@ -115,13 +117,15 @@ const { testimonial } = post.data;
       <!-- next section -->
 
 
-
+ <!-- picture -->
+ <Picture picture={picture} />
     
     
     <!-- Move this section down -->
     <section class="section">
       <div class="container">
-        <h2 class="text-center">Blogs by {post.data.name}</h2>
+        <h2 class="text-left">Blogs by {post.data.name}</h2>
+        <div style="height: 40px;"></div>
         <Blogs posts={filteredPosts} />
       </div>
     </section>
@@ -129,7 +133,8 @@ const { testimonial } = post.data;
   <!-- testimonial -->
   <Testimonial testimonial={testimonial} />
    
+ 
   
-    
+ 
 
   </Base>
