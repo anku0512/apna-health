@@ -126,7 +126,14 @@ const { testimonial, picture } = post.data;
       <div class="container">
         <h2 class="text-left">Blogs by {post.data.name}</h2>
         <div style="height: 40px;"></div>
-        <Blogs posts={filteredPosts} />
+        {filteredPosts.length > 0 ? (
+          <Blogs posts={filteredPosts} />
+        ) : (
+          <p>
+            There are no blog posts by {post.data.name}. 
+            <a href="/blog" style="text-decoration: underline; color: blue;">View all posts</a>
+          </p>
+        )}
       </div>
     </section>
 
