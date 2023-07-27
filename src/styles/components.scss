@@ -545,7 +545,9 @@ select:invalid {
 }
 
 
-
+.profile-card-container {
+  overflow-x: hidden;
+}
 //profile-card
 .profile-card {
   margin: 0;
@@ -554,9 +556,13 @@ select:invalid {
   list-style: none;
   font-family: 'Josefin Sans', sans-serif;
 }
+
+
 // Add media query for mobile screens
 @media (max-width: 768px) {
-
+  .profile-card {
+    overflow-x: hidden;
+  }
   // Make wrapper display as flex column
   .wrapper {
     flex-direction: column;
@@ -583,6 +589,7 @@ select:invalid {
   max-width: 350px;
   margin: 0 auto;
 }
+
 // Add margin bottom to left wrapper
 .wrapper .left {
   margin-bottom: 20px; 
