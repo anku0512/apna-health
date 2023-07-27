@@ -23,10 +23,7 @@
       "name": "Doctors",
       "url": "/doctors"
     },
-    {
-      "name": "Contact",
-      "url": "/contact"
-    },
+    
     {
       "name": "Blog",
       "url": "/blog"
