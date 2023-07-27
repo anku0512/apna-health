@@ -13,54 +13,8 @@
       "url": "/blog"
     },
     {
-      "name": "Features",
-      "url": "/features"
-    },
-    {
       "name": "Become A Franchise",
       "url": "/become-a-franchise"
-    },
-    {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Career",
-          "url": "/career"
-        },
-
-        {
-          "name": "Integrations",
-          "url": "/integrations"
-        },
-
-        {
-          "name": "Pricing",
-          "url": "/pricing"
-        },
-        {
-          "name": "Sign In",
-          "url": "/signin"
-        },
-
-        {
-          "name": "Elements",
-          "url": "/elements"
-        },
-        {
-          "name": "Changelog",
-          "url": "/changelog"
-        },
-        {
-          "name": "Terms And Conditions",
-          "url": "/terms-and-conditions"
-        }
-      ]
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
     }
   ],
 
@@ -74,12 +28,12 @@
       "url": "/contact"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "Blog",
+      "url": "/blog"
     },
     {
-      "name": "Changelog",
-      "url": "/changelog"
+      "name": "Become A Franchise",
+      "url": "/become-a-franchise"
     }
   ]
 }

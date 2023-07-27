@@ -1,9 +1,9 @@
 {
-  "facebook": "https://facebook.com/",
-  "twitter": "https://twitter.com/",
-  "instagram": "",
+  "facebook": "https://facebook.com/joinapnahealth",
+  "twitter": "",
+  "instagram": "https://www.instagram.com/joinapnahealth/",
   "youtube": "",
-  "linkedin": "https://linkedin.com/",
+  "linkedin": "",
   "github": "",
   "gitlab": "",
   "medium": "",
@@ -16,7 +16,7 @@
   "tumblr": "",
   "reddit": "",
   "vk": "",
-  "whatsapp": "",
+  "whatsapp": "https://api.whatsapp.com/send/?phone=917619114536&text=&type=phone_number&app_absent=0",
   "snapchat": "",
   "vimeo": "",
   "tiktok": "",
@@ -25,6 +25,6 @@
   "email": "",
   "phone": "",
   "address": "",
-  "skype": "https://skype.com/",
+  "skype": "",
   "website": ""
 }
