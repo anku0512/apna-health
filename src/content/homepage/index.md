@@ -93,7 +93,7 @@ testimonial:
       rating: five
       content: Partnering with Apna Health was probably the best decision that I took and I am really happy with the service that I am getting.
     - author: Dr. Harikrishna
-      avatar: "/images/users/user-3.png"
+      avatar: "/images/doctors-post/hari-krishna/user.jpg"
       organization: Sahasra - Apna Health Ayurvedic & Panchakarma Clinic
       rating: five
       content: Ankush had helped me a lot in the whole procedure from deciding my clinic's name to the logo design and the interior design of my clinic. He was so patient with the design, he would change the design as I would say and the best part is I got such beautiful design within my budget. Very happy with Apna Health.

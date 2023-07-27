@@ -13,11 +13,11 @@ const { posts } = Astro.props;
   {
     posts.map((post: any) => (
       <div class="mb-8 md:col-6">
-        <div class="card">
+        <div class="card" style="width: 255px;">
           <Image
-            class="card-img"
-            width={235}
-            height={304}
+            class="card-img "
+            height={210}
+            width={300}
             src={post.data.image}
             alt={post.data.title}
           />
