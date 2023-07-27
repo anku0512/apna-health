@@ -31,15 +31,17 @@ const currentPosts = recentPost.slice(0, config.settings.pagination);
   image={doctorsIndex.data.image}
 >
   <Shape />
-  <section class="page-hero pt-16">
+  <!-- // this was the section which showed home button on the top below header -->
+  <!-- <section class="page-hero pt-16">
     <div class="container">
       <PageHeader page_data={doctorsIndex.data} />
     </div>
-  </section>
+  </section> -->
   <section class="section">
     <div class="container">
       <FeaturedDoctors posts={featuredPost} />
-      <DoctorsCategories categories={categories} />
+      <!-- // this line is responsible for showing doctors categories -->
+      <!-- <DoctorsCategories categories={categories} /> -->
       <h2 class="h4 mb-4"></h2>
       <Doctors posts={currentPosts} />
       <Pagination
