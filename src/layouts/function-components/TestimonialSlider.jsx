@@ -13,6 +13,7 @@ const TestimonialSlider = ({ list }) => {
   return (
     <div className="reviews-carousel relative">
       <Swiper
+      
         pagination={{
           type: "bullets",
           el: paginationRef.current,
@@ -24,6 +25,10 @@ const TestimonialSlider = ({ list }) => {
         }}
         // loop={true}
         modules={[Pagination, Autoplay]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false
+        }}
         slidesPerView={1}
         breakpoints={{
           992: {

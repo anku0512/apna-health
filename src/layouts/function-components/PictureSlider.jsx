@@ -24,6 +24,10 @@ const PictureSlider = ({ list }) => {
         }}
         // loop={true}
         modules={[Pagination, Autoplay]}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false
+        }}
         slidesPerView={1}
         breakpoints={{
           992: {
