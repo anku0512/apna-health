@@ -25,9 +25,11 @@ const TestimonialSlider = ({ list }) => {
         }}
         // loop={true}
         modules={[Pagination, Autoplay]}
+        loop={true}
         autoplay={{
           delay: 3000,
-          disableOnInteraction: false
+          disableOnInteraction: false,
+          stopOnLastSlide: false
         }}
         slidesPerView={1}
         breakpoints={{
