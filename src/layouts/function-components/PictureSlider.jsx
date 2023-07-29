@@ -42,7 +42,7 @@ const PictureSlider = ({ list }) => {
       >
         {list.map((item, i) => (
   <SwiperSlide key={"feature-" + i}>
-    <div className="card mb-4">
+    <div className="picture-card mb-4">
       <div className="photo flex flex-col items-center">
         <div className="photo-author-avatar">
           <img 

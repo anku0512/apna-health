@@ -515,21 +515,21 @@ select:invalid {
 }
 
 //card for picture slider
-.card {
+.picture-card {
   background-color: white; 
   box-shadow: 1px 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   padding: 10px;
   border-radius: 8px;
 }
-.card:nth-child(odd) {
+.picture-card:nth-child(odd) {
   margin-right: 20px;
 }
-.card-container {
+.picture-card-container {
   display: flex;
   gap: 20px;
 }
 
-.card {
+.picture-card {
   display: flex; 
   flex-direction: column;
   align-items: center;

@@ -20,9 +20,9 @@ const { Content } = await post.render();
     <div class="row justify-center">
       <div class="lg:col-10">
         <Image
-          class="w-full rounded-xl"
+          class="w-full rounded-xl object-cover"
           src={post.data.image}
-          alt=""
+          alt={post.data.subtitle}
           width={920}
           height={450}
         />
