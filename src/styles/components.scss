@@ -611,20 +611,35 @@ select:invalid {
 
 // Allow spec boxes to wrap to new row
 .wrapper .right .specializations_data {
+  display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 
 // Make spec boxes take up equal width
-.spec-box {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-}
-
-
-
- 
+// .spec-box {
+//   flex: 0 0 33.33%;
+//   max-width: 33.33%;
+// }
 
 }
+
+
+// Allow spec boxes to wrap to new row
+.wrapper .right .specializations_data {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+// Make spec boxes take up equal width
+// .spec-box {
+//   flex: 0 0 33.33%;
+//   max-width: 33.33%;
+// }
+
 body{
    background-color: #f3f3f3;
 }
