@@ -59,6 +59,7 @@ const doctorsCollection = defineCollection({
       }),
     ),
   })
+
   }),
 });
 

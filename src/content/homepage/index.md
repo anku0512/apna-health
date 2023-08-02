@@ -5,7 +5,7 @@ banner:
   image: /images/clinic-store.png
   button:
     label: Become A Franchise
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSfvtAo2_TPiUOEW1JpeaMFbU-M1Qzfeo8WuS5P1bCAbQAHWHA/viewform"
+    link: "/become-a-franchise"
     enable: true
 
 ##key features
