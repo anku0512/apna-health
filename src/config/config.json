@@ -27,6 +27,12 @@
     }
   },
 
+  "disqus": {
+    "enable": true,
+    "shortname": "themefisher-template",
+    "settings": {}
+  },
+
   "params": {
     "footer_description": "We invite you to explore the services we offer and see how Apna Health can help you increase your profits and spread the word about your clinic.",
     "email": "ankush@apnahealth.in",
