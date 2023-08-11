@@ -33,7 +33,7 @@ const { name } = Astro.props.post.data;
 
 // Filter posts
 const filteredPosts = posts.filter(post => {
-  return post.data.categories.includes(name)
+  return post.data.author.includes(name)
 });
 import "../styles/components.scss";
 
