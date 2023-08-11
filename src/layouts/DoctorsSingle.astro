@@ -83,7 +83,7 @@ const { testimonial, picture } = post.data;
     <div class="wrapper">
         <div class="left">
           <div class="card-image basis-1/4">
-            <img src={post.data.image} alt="" >
+            <img src={post.data.image} alt={post.data.author} >
           </div>
             <h4>{post.data.name}</h4>
              <p>{post.data.subtitle}</p>
