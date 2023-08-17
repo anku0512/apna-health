@@ -26,7 +26,7 @@ const doctorsCollection = defineCollection({
     date: z.date().optional(),
     image: z.string().optional(),
     image2: z.string().optional(),
-    video: z.string().optional(),
+    
     instagram: z.string().optional(),
     facebook: z.string().optional(),
     google: z.string().optional(),
@@ -58,7 +58,18 @@ const doctorsCollection = defineCollection({
         detail: z.string().optional(),
       }),
     ),
-  })
+  }),
+
+  video: z.object({
+    intro: z.string().optional(),
+    video_list: z.array(
+      z.object({
+        video: z.string().optional(),
+        alternate: z.string().optional(),
+        comment: z.string().optional(), 
+      })
+    ).optional()
+  }).optional()
 
   }),
 });

@@ -16,4 +16,11 @@ picture:
     - photo: "/path/to/photo.png"
       alternate: "Alternate text"
       detail: "Photo detail"
+
+video:
+  intro: "Video heading"
+  video_list:
+    - video: "/path/to/video.mp4"
+      alternate: "Alternate text"
+      comment: "Video comment"
 ---
