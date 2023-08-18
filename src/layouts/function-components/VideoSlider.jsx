@@ -1,82 +1,71 @@
 // video slider
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Star } from "react-feather";
 import SwiperCore, { Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+
+
 const VideoSlider = ({ list }) => {
-  SwiperCore.use([Pagination, Autoplay]);
-  const [swiper, setSwiper] = useState(null);
-  const paginationRef = useRef(null);
+
+  const [swiper, setSlider] = useState(null);
+
+  // Keep track of current playing video index
+  const [activeVideoIndex, setActiveVideoIndex] = useState(0);
+
+  // Ref to current playing video
+  const videoRef = useRef(null);
+
+  // useEffect(() => {
+  //   const swiper = swiperRef.current;
+    
+  //   if (swiper) {
+  //     swiper.slides.forEach((slide, index) => {
+  //       slide.on('transitionStart', () => {
+  //         setActiveVideoIndex(index);
+  //       });
+  //     });
+  //   }
+  // }, [swiper]);
+
+  // Stop current playing video when slide changes
+  const onSlideChange = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+  };
+  
 
   return (
-    <div className="video-carousel relative">
-      <Swiper
-        pagination={{
-          type: "bullets",
-          el: paginationRef.current,
-          clickable: true,
-          dynamicBullets: true,
-        }}
-        onSwiper={(swiper) => {
-          setSwiper(swiper);
-        }}
-        // loop={true}
-        modules={[Pagination, Autoplay]}
-        loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-          stopOnLastSlide: false
-        }}
-        slidesPerView={1}
-        breakpoints={{
-          992: {
-            slidesPerView: 2,
-          },
-          1200: {
-            slidesPerView: 3,
-          },
-        }}
-      >
-        {list.map((item, i) => (
-          <SwiperSlide key={"feature-" + i}>
-            
-            <div className="video-card">
-              
-            <video 
+    <Swiper
+      onSlideChange={onSlideChange} 
+      onSwiper={setSlider}
+      loop={true}
+    >
+      {list.map((item, index) => (
+        <SwiperSlide key={index}>
+          
+          <div className="video-card">
+          <video 
+            ref={index === activeVideoIndex ? videoRef : null}
             controls
-            autoPlay
-            muted
-  type="video/mp4"
-  src={item.video}
-  alt={item.alternate}
-  loop
-  width="300"
+            type="video/mp4"
+            src={item.video}
+            alt={item.alternate}
+            width="300"
   height="300"
-/>
+          />
+        <p className="text-center">{item.comment}</p>
 
-              
-              <p className="text-center">{item.comment}</p>
-
-            </div>
-
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div className="relative flex justify-center">
-        <div
-          width="100%"
-          className="swiper-pagination reviews-carousel-pagination !bottom-0"
-          style={{ width: "100%" }}
-          ref={paginationRef}
-        ></div>
-      </div>
-    </div>
+</div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+    
   );
-};
 
+};
 export default VideoSlider;

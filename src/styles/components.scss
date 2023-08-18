@@ -545,6 +545,25 @@ select:invalid {
 }
 
 
+// Video card for video slider
+.video-card {
+  background-color: white;
+  box-shadow: 1px 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
+  padding: 10px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  video {
+    max-width: 100%;
+  }
+
+  width: fit-content;
+}
+
+
 .profile-card-container {
   overflow-x: hidden;
 }
