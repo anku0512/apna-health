@@ -60,16 +60,16 @@ const doctorsCollection = defineCollection({
     ),
   }),
 
-  video: z.object({
-    intro: z.string().optional(),
-    video_list: z.array(
-      z.object({
-        video: z.string().optional(),
-        alternate: z.string().optional(),
-        comment: z.string().optional(), 
-      })
-    ).optional()
-  }).optional()
+  // video: z.object({
+  //   intro: z.string().optional(),
+  //   video_list: z.array(
+  //     z.object({
+  //       video: z.string().optional(),
+  //       alternate: z.string().optional(),
+  //       comment: z.string().optional(), 
+  //     })
+  //   ).optional()
+  // }).optional()
 
   }),
 });
