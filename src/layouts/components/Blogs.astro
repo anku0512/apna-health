@@ -33,7 +33,9 @@ import {
 
 <div class="row">
   {
-    posts.map((item: any) => (
+    posts.filter(item => {
+      return new Date(item.data.date) < new Date();   
+    }).map((item: any) => (
       <div class="mb-8 md:col-6 lg:col-4">
         <div class="card">
           <a href={`/blog/${item.slug}`}>
