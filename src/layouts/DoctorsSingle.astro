@@ -39,10 +39,10 @@ import "../styles/components.scss";
 
 import Testimonial from "@layouts/components/Testimonial.astro";
 import Picture from "@layouts/components/Picture.astro";
-import Video from "@layouts/components/Video.astro";
+
 import { getEntryBySlug } from "astro:content";
 const doctors = await getEntryBySlug("doctors", "index");
-const { testimonial, picture, video } = post.data;
+const { testimonial, picture } = post.data;
 
 
 ---
@@ -147,6 +147,7 @@ const { testimonial, picture, video } = post.data;
       <div class="container">
         <h2 class="text-left">Blogs by {post.data.name}</h2>
         <div style="height: 40px;"></div>
+
         {filteredPosts.length > 0 ? (
           <Blogs posts={filteredPosts} />
         ) : (
